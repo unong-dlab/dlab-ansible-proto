@@ -1,0 +1,5 @@
+---
+## ansible-playbook playbooks/setup-local.yml -i inven/local-proto --limit centos --tags base -K
+- hosts: all
+  roles:
+   - { role: base-dir, tags: ['base'] }
