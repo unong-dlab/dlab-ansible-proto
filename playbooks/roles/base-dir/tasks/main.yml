@@ -1,0 +1,19 @@
+---
+- name: Check need to make top directory
+  stat: path={{top_dir}}
+  register: top_dir_stat
+
+- name: Make top directory
+  become: yes
+  become_method: sudo
+  file: src={{volume}}  dest={{top_dir}} mode=755  owner={{username}} group={{groupname}} state=link
+  when: "top_dir_stat.stat.exists is not defined or not top_dir_stat.stat.exists"
+
+- name: Make default directories
+  become: yes
+  become_method: sudo
+  file: src={{ item.src }}  dest={{ item.dest }} mode={{ item.mode }} owner={{username}} group={{groupname}} state={{ item.state }}
+  with_items:
+  - { state: "directory", mode: 755, src: "", dest: "{{program_dir}}" }
+  - { state: "directory", mode: 755, src: "", dest: "{{logs_dir}}" }
+  - { state: "directory", mode: 755, src: "", dest: "{{service_dir}}" }
