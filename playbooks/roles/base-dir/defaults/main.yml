@@ -1,5 +1,4 @@
 # default directories
-top_dir: "/dlab"
 logs_dir: "{{top_dir}}/logs"
 service_dir: "{{top_dir}}/service"
 program_dir: "{{top_dir}}/program"
