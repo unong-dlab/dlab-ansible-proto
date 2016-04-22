@@ -2,3 +2,4 @@
 *.log
 playbooks/*.retry
 *.pem
+aws_access_key.*
