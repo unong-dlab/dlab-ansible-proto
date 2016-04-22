@@ -1,0 +1,7 @@
+---
+## ansible-playbook playbooks/setup-local.yml -i inven/local-proto --limit centos --tags base -K
+## ansible-playbook playbooks/setup-local.yml --extra-vars "@group_vars/tag_Type_proto.yml"
+##   meta: refresh_inventory
+- hosts: tag_{{hosttag}}
+  roles:
+   - { role: base-dir, tags: ['base'] }
