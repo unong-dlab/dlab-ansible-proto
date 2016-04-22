@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/unong-dlab/dlab-ansible-proto.svg?label=ready&title=Ready)](http://waffle.io/unong-dlab/dlab-ansible-proto)
 # 명세버전: 0.1.0
 
 ## 기능별 command
