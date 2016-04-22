@@ -18,3 +18,6 @@
 > --tags base 는 playbook 에 명시된 task 들 중에 base 태그가 박힌 task 만 실행하겠다는 의미
 >
 > -K 는 sudo 와 같이 다른 계정에 대한 비번이 필요할때 물어보겠다는 의미.
+
+## ec2 에 셋팅하기
+* ansible-playbook -i inven/ec2/ec2.py playbooks/setup-local.yml --extra-vars "@group_vars/proto"
