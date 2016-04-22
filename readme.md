@@ -1,8 +1,10 @@
-# 기능별 command
+# 명세버전: 0.1.0
+
+## 기능별 command
 * 아래 명시하는 모든 command 는 이 프로젝트 root dir 에서 실행하는걸로
 * aws_access_key.sh 와 aws private pem key 는 별도 공유.
 
-## directory 셋팅
+### directory 셋팅
 ```{r, engine='bash', count_lines}
 $ansible-playbook playbooks/setup-local.yml -i inven/local-proto --limit centos --tags base -K
 ```
@@ -14,7 +16,7 @@ $ansible-playbook playbooks/setup-local.yml -i inven/local-proto --limit centos 
  > * --tags base 는 playbook 에 명시된 task 들 중에 base 태그가 박힌 task 만 실행하겠다는 의미
  > * -K 는 sudo 와 같이 다른 계정에 대한 비번이 필요할때 물어보겠다는 의미.
 
-## ec2 용 playbook 실행
+### ec2 용 playbook 실행
 * 먼저 아래 shell command 를 통해 어떤 aws_secret_access_key 를 사용할것인지 셋팅해준다.
 ```{r, engine='bash', count_lines}
 ## 앞에 . 꼭 있어야함
