@@ -27,6 +27,7 @@ $. export_ec2_hosts.sh proto
  > * ec2.py 는 사실 건들게 없어보임. ec2.ini 는 케이스에 맞게 수정하는게 좋음. 자세한 내용은 ini 파일 열어보면 감이옴.
  > * 마지막으로 ec2.py 와 ec2.ini 를 이용해서 해당하는 aws resource 목록을 ~/.ssh/tmp/~.cache 파일에 기록한다.
  > * cache 파일을 적어두면 이후 ansible 로 호스틈목록 가져올때 오래걸리는 api 를 거치지 않고 캐시파일에서 읽어옴 (당연히 갱신해주고 싶으면 다시 실행해주면됨)
+
 ```{r, engine='bash', count_lines}
 $ansible-playbook playbooks/setup-local.yml --extra-vars "@group_vars/tag_Type_proto"
 ```
