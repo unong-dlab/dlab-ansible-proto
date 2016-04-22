@@ -1,5 +1,6 @@
 # 기능별 command
 * 아래 명시하는 모든 command 는 이 프로젝트 root dir 에서 실행하는걸로
+* aws_access_key.sh 와 aws private pem key 는 별도 공유.
 
 ## directory 셋팅
 ```{r, engine='bash', count_lines}
