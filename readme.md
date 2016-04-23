@@ -1,4 +1,7 @@
 # 명세버전: 0.1.0
+## Prerequisite
+* pem directory 아래에 aws 접속에 필요한 pem 파일을 넣어두고 group-vars 파일에서 접속에 필요한 pem 파일을 지정해주자.
+* 접속하고자 하는 aws resource 권한을 가진 키정보를 inven/ec2/{{type}}/ 아래에 aws_access_key.sh 파일을 만들어서 export 가능하게 해주자.
 
 ## 기능별 command
 * 아래 명시하는 모든 command 는 이 프로젝트 root dir 에서 실행하는걸로
