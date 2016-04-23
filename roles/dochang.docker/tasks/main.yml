@@ -27,6 +27,8 @@
   when: result | failed
 
 - name: install docker-py
+  become: yes
+  become_method: sudo
   pip:
     name: docker-py
     state: present
@@ -48,6 +50,8 @@
   with_items: '{{ docker_users or [] }}'
 
 - name: enable docker service
+  become: yes
+  become_method: sudo
   service:
     name: docker
     enabled: yes
